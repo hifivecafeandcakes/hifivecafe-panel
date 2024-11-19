@@ -1,0 +1,529 @@
+.sidebar-content {
+        font-size: 13px;
+}
+
+.sidebar-head {
+        font-size: 15px;
+}
+
+.sidebar {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        overflow-y: auto;
+        /* Add this to make the sidebar's content scrollable */
+        /* Rest of your existing styles */
+}
+
+Rest of your existing styles .vendors-btn {
+        font-size: 12px;
+}
+
+.vendor-form {
+        width: 30%;
+}
+
+.api-content {
+        font-size: 12px;
+}
+
+.api-content1 {
+        font-size: 10px;
+}
+
+.btn-invoice {
+        font-size: 8px;
+}
+
+.btn-refcode {
+        font-size: 12px;
+}
+
+.user-search {
+
+        padding: 10px !important;
+}
+
+.user-input {
+        width: 280px;
+}
+
+.userdate {
+        width: 200px;
+}
+
+
+.total-purchase {
+        position: absolute;
+        margin-left: 370px;
+        margin-top: 10px;
+}
+
+.amount-purchase {
+        position: absolute;
+        margin-left: 20px;
+
+}
+
+.amount-head {
+
+        margin-left: 30px;
+}
+
+.bg-time {
+        border-radius: 10px;
+        color: white;
+}
+
+.amount-head1 {
+        margin-left: 200px;
+
+}
+
+.total-purchase1 {
+        margin-left: 350px;
+        margin-top: -22px;
+}
+
+
+
+
+
+.btn-profile {
+        margin-left: 300px;
+        margin-top: -70px;
+}
+
+.user_account {
+        margin-left: 290px;
+}
+
+.user_account1 {
+        margin-left: 360px;
+}
+
+.user_account2 {
+        margin-left: 270px;
+}
+
+.handlezoom {
+        font-size: 40%;
+}
+
+.secound-image-zoom {
+        margin-left: 65%;
+        margin-top: -4%;
+}
+
+.secound-image-zoom1 {
+        margin-left: 5%;
+        margin-top: -2%;
+}
+
+.img-icon-register {
+        color: white;
+}
+
+
+
+
+
+.all-redeem-width {
+        width: 70%;
+}
+
+.box-dash {
+        height: 30%;
+        width: 30%;
+}
+
+.Dashboard1-head {
+        font-size: 130% !important;
+}
+
+.Dashboard1-content {
+        font-size: 90% !important;
+}
+
+.Dashboard1-content1 {
+        font-size: 80% !important;
+}
+
+.btn-l1 {
+        font-size: 8px;
+        text-align: center;
+}
+
+.vendors-btn1 {
+        font-size: 8px;
+}
+
+.bg-color {
+        background-color: #282c34;
+}
+
+.font-sizet1 {
+        font-size: 14px;
+        font-weight: 700;
+}
+
+.btn-invoice {
+        font-weight: 700;
+}
+
+.head-invoice {
+        font-weight: 500;
+        font-size: 17px;
+}
+
+.bg-pdf {
+        background-color: rgb(212, 204, 204);
+}
+
+.content-headpdf {
+        font-weight: 600;
+        padding: 25px;
+}
+
+.content-headpdf1 {
+        font-weight: 600;
+        padding: 70px;
+}
+
+.contentpdf2 {
+        margin-top: 4%;
+}
+
+.contentpdf3 {
+        margin-top: 5%;
+        margin-left: 10px;
+}
+
+.hrpdf {
+        height: 7px;
+        border: solid 2px black;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-right-style: none;
+
+}
+
+.pdftotal {
+        font-size: 14px;
+        font-weight: 750;
+}
+
+.btn-pdffile {
+        font-size: 7px !important;
+}
+
+.bg-primary1 {
+        background-color: blue;
+        color: white;
+}
+
+
+.bg-red1 {
+        background-color: red;
+        color: white;
+}
+
+.headinvoice {
+        font-size: 13px;
+}
+
+.model11 {
+        height: 350px !important;
+}
+
+.vendors-btn1 {
+        font-size: 7px;
+}
+
+.MOEDL12 {
+        width: 500px !important;
+}
+
+.btn-invoice1 {
+        font-size: 13px;
+}
+
+.api-content2 {
+        font-size: 12px;
+}
+
+
+
+/* .smaller-swal {
+        width: 480px;
+        height: 150px;
+        margin-left: 80vh;
+        margin-top: 45.5vh;
+}
+
+.smaller-swal .swal2-icon i {
+        font-size: 10px;
+}
+
+.smaller-swal .swal2-title {
+        font-size: 18px;
+} */
+
+
+@media all and (min-width: 300px) {}
+
+@media all and (min-width: 360px) {
+        .csv-btn {
+                width: 3vh;
+                margin-left: 5vh;
+        }
+
+        .input-group {
+                width: 20vh;
+        }
+}
+
+
+@media (max-width: 430px) {
+        .csv-btn {
+                width: 3vh;
+                margin-left: 5vh;
+        }
+
+        .input-group {
+                width: 22vh;
+        }
+
+        .smaller-swal {
+                width: 350px;
+                height: 180px;
+                text-align: center;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                margin-left: 30vh !important;
+                margin-top: 45.5vh;
+        }
+}
+
+@media (max-width: 780px) {
+        .csv-btn {
+                width: 1vh;
+                margin-left: 5vh;
+        }
+
+        .input-group {
+                width: 20vh;
+        }
+
+        .smaller-swal {
+                width: 350px;
+                height: 180px;
+                text-align: center;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                margin-left: 50% !important;
+                margin-top: 45.5vh;
+        }
+}
+
+/* @media all and (min-width: 1024px) {
+            .csv-btn {
+                    width: 1vh;
+                    margin-left: 5vh;
+            }
+
+            .input-group {
+                    width: 20vh;
+            }
+    } */
+
+
+
+
+
+
+
+
+@media all and (max-width: 1024px) {
+        .secound-image-zoom1 {
+                margin-top: -55px;
+                margin-left: -50px;
+        }
+
+        .secound-image-zoom {
+                margin-top: -55px;
+                margin-left: -50px;
+        }
+
+        #btn-lft {
+                margin-top: 25px;
+                margin-left: -60px;
+        }
+
+        #btn-rgt {
+                margin-top: 68px;
+                margin-left: -30px;
+        }
+
+        .smaller-swal {
+                width: 350px;
+                height: 180px;
+                text-align: center;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                margin-left: 65vh;
+                margin-top: 45.5vh;
+        }
+}
+
+@media all and (max-width: 1440px) {
+        .secound-image-zoom1 {
+                margin-top: -25px;
+                margin-left: 60px;
+        }
+
+        .secound-image-zoom {
+                margin-top: -55px;
+                margin-left: 200px;
+        }
+
+        #btn-lft {
+                margin-top: 25px;
+        }
+
+        #btn-rgt {
+                margin-top: 68px;
+                margin-left: -190px;
+        }
+
+        .smaller-swal {
+                width: 350px;
+                height: 180px;
+                text-align: center;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                margin-left: 75vh;
+                margin-top: 45.5vh;
+        }
+}
+
+@media all and (max-width: 2560px) {
+        .secound-image-zoom {
+                margin-top: -55px;
+                margin-left: 200px;
+        }
+
+        #btn-lft {
+                margin-top: 35px;
+                margin-left: -90px;
+        }
+
+        #btn-rgt {
+                margin-top: 68px;
+                margin-left: -160px;
+        }
+
+        .loder {
+                text-align: center;
+                padding: 3vh;
+        }
+
+        .smaller-swal {
+                width: 350px;
+                height: 180px;
+                text-align: center;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                margin-left: 95vh;
+                margin-top: 45.5vh;
+        }
+
+        .smaller-swal .swal2-icon i {
+                font-size: 10px;
+        }
+
+        .smaller-swal .swal2-title {
+                font-size: 18px;
+        }
+}
+
+.css-0 {
+        border: grey;
+        border-width: 1px;
+        border-style: solid;
+        padding: 5px;
+}
+
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+        height: 0.525em !important;
+}
+
+.modal-content .slick-next {
+        left: 96%;
+}
+
+.modal-content .slick-prev {
+        left: 1%;
+}
+
+.img-container {
+        border: 2px solid darkorange;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+}
+
+.img-container img {
+        width: 100%;
+        height: 200px
+}
+
+.img-container video {
+        width: 100%;
+        height: 200px
+}
+
+.img-container .count-btn {
+        /* position: absolute; */
+        /* top: 90px; */
+        /* left: 4%; */
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: lightcoral;
+        color: white;
+        font-size: 8px;
+        padding: 4px 8px;
+        border: none;
+        cursor: pointer;
+        border-radius: 25px;
+        text-align: center;
+}
+
+.img-container .delete-btn {
+        /* position: absolute; */
+        /* top: 90px; */
+        /* left: 96%; */
+        float: right;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #555;
+        color: white;
+        font-size: 8px;
+        padding: 4px 8px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+}
+
+.img-container .name {
+        font-size: 12px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-top: 3px;
+        padding-bottom: 3px;
+}
+
+.green {
+        color: green !important;
+}
