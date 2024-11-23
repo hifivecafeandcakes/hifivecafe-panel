@@ -64,7 +64,8 @@ const Main = () => {
 
   return (
     <>
-      <BrowserRouter basename="/panel/subadmin">
+      {/* <BrowserRouter basename="/panel/subadmin"> */}
+      <BrowserRouter>
         <Routes>
           <Route
             path="/"
