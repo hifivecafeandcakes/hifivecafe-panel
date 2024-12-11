@@ -229,6 +229,7 @@ const ListCategory = () => {
                               <TableCell className='text-center'>Action</TableCell>
                               <TableCell className='text-center'>S.NO</TableCell>
                               <TableCell className='text-center'>TITLE</TableCell>
+                              <TableCell className='text-center'>CODE</TableCell>
                               <TableCell className='text-center'>RESERVATION NAME</TableCell>
                               <TableCell className='text-center'>IMAGE</TableCell>
                               <TableCell className='text-center'>PRICEE RANGE</TableCell>
@@ -250,6 +251,7 @@ const ListCategory = () => {
                                 <TableCell className='text-center'>{index + 1}</TableCell>
                                 <TableCell className='text-center'>{item.cat_title}</TableCell>
                                 <TableCell className='text-center'>{item.reser_title}</TableCell>
+                                <TableCell className='text-center'>{item.reser_cat_code}</TableCell>
                                 <TableCell className='text-center' onClick={() => handleOpenModal(item.cat_image)}>
                                   <ImageIcon className='text-primary' />
                                 </TableCell>

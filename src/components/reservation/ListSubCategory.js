@@ -312,6 +312,7 @@ const ListSubCategory = () => {
                               <TableCell className='text-center'>Image</TableCell>
 
                               <TableCell className='text-center'>Extra Image</TableCell>
+                              <TableCell className='text-center'>STATUS</TableCell>
 
                               <TableCell className='text-center'>CREATED AT</TableCell>
 
@@ -342,6 +343,7 @@ const ListSubCategory = () => {
                                 <TableCell className='text-center' onClick={() => handleOpenModal(item.sub_extra_img)}>
                                   <ImageIcon className='text-primary' />
                                 </TableCell>
+                                <TableCell className={`text-center ${(item.status == "Active") ? "green" : ""}`}>{item.status}</TableCell>
 
                                 <TableCell className='text-center'>
                                   {(new Date(item.created_at).toISOString().slice(0, 10).split('-').reverse().join('-'))}

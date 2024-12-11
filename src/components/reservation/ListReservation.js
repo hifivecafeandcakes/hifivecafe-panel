@@ -207,6 +207,7 @@ const ListReservation = () => {
                               <TableCell className='text-center'>S.NO</TableCell>
                               <TableCell className='text-center'>Main TITLE</TableCell>
                               <TableCell className='text-center'>TITLE</TableCell>
+                              <TableCell className='text-center'>CODE</TableCell>
                               <TableCell className='text-center'>IMAGE</TableCell>
                               <TableCell className='text-center'>DESCRIPTION</TableCell>
                               <TableCell className='text-center'>EXTRA IMAGES</TableCell>
@@ -225,6 +226,7 @@ const ListReservation = () => {
                                 <TableCell className='text-center'>{index + 1}</TableCell>
                                 <TableCell className='text-center'>{item.reser_main_title}</TableCell>
                                 <TableCell className='text-center'>{item.reser_title}</TableCell>
+                                <TableCell className='text-center'>{item.reser_code}</TableCell>
                                 <TableCell className='text-center' onClick={() => handleOpenModal1(item.reser_image)}>
                                   <ImageIcon className='text-primary' />
                                 </TableCell>

@@ -25,6 +25,10 @@ const AddCategory = () => {
   const [modalImage, setModalImage] = useState(false);
   const [modalImages, setModalImages] = useState(false);
 
+
+  const [resCatCode, setResCatCode] = useState("silver");
+  const [resCatCodes, setResCatCodes] = useState(['silver','gold','elite']);
+
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -55,6 +59,7 @@ const AddCategory = () => {
           console.log(data?.Response.result);
           let result = data?.Response.result[0];
           setTitle(result.cat_title);
+          setResCatCode(result.reser_cat_code);
           setPriceRange(result.price_range);
           setImage(result.cat_image);
           setStatus(result.status);
@@ -134,6 +139,7 @@ const AddCategory = () => {
 
     const formData = new FormData();
     formData.append('cat_title', Title);
+    formData.append('reser_cat_code', resCatCode);
     formData.append('price_range', priceRange);
     formData.append('cat_image', Image);
     formData.append('reser_id', reserId);
@@ -215,6 +221,22 @@ const AddCategory = () => {
                     {reservationList?.map((reservation, index) => (
                       <MenuItem key={index} value={reservation.reser_id}>
                         {reservation.reser_title}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+
+                <FormControl fullWidth variant="outlined" className='mt-4'>
+                  <InputLabel>Reservation Category Code</InputLabel>
+                  <Select className="bg-light"
+                    value={resCatCode}
+                    required
+                    onChange={(event) => setResCatCode(event.target.value)}
+                    label="Reservation Category Code"
+                  >
+                    {resCatCodes?.map((item, index) => (
+                      <MenuItem key={index} value={item}>
+                        {item}
                       </MenuItem>
                     ))}
                   </Select>

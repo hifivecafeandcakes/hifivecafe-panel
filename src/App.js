@@ -49,6 +49,7 @@ import ListCategory from "./components/reservation/ListCategory";
 import AddCategory from "./components/reservation/AddCategory";
 import ListSubCategory from "./components/reservation/ListSubCategory";
 import AddSubCategory from "./components/reservation/AddSubCategory";
+import ListBooked from "./components/booking/ListBooked";
 
 
 
@@ -113,7 +114,7 @@ const Main = () => {
             }
           />
 
-          
+
           <Route
             path="/UpdateReservation/:id"
             element={
@@ -125,7 +126,7 @@ const Main = () => {
             }
           />
 
-        <Route
+          <Route
             path="/ListCategory"
             element={
               isAuthenticated() ? (
@@ -147,7 +148,7 @@ const Main = () => {
             }
           />
 
-          
+
           <Route
             path="/UpdateCategory/:id"
             element={
@@ -181,7 +182,7 @@ const Main = () => {
             }
           />
 
-          
+
           <Route
             path="/UpdateSubCategory/:id"
             element={
@@ -193,7 +194,20 @@ const Main = () => {
             }
           />
 
-          
+
+
+          <Route
+            path="/ListBooked"
+            element={
+              isAuthenticated() ? (
+                [<Navbar />, <Sidebar />, <ListBooked />]
+              ) : (
+                <Login />
+              )
+            }
+          />
+
+
 
           <Route
             path="/GalleryCatList"

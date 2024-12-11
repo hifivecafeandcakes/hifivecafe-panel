@@ -231,6 +231,35 @@ export default function Sidebar() {
                 </ul>
               </li>
 
+              <li
+                className={`nav-item ${reportsOpen1 ? "menu-open" : "menu-close"
+                  }`}
+              >
+                <a className="nav-link sidebar-head" onClick={toggleReports1}>
+                  <i className="nav-icon fas fa-user" />
+                  <p className="treeview-fontsize1">
+                    Reservations Booking
+                    <i className="fas fa-angle-left right" />
+                  </p>
+                </a>
+                <ul
+                  className={`nav nav-treeview ${reportsOpen1 ? "d-block" : "d-none"
+                    }`}
+                >
+                  <li className="nav-item">
+                    <Link
+                      to="/ListBooked"
+                      className="nav-link ml-4 sidebar-content"
+                    >
+                      <i className="far fa-circle nav-icon" />
+                      <p className="treeview-fontsize1">Booked Board</p>
+                    </Link>
+                  </li>
+
+                  
+                </ul>
+              </li>
+
             </ul>
           </nav>
         </div>

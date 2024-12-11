@@ -455,25 +455,25 @@ const AddSubCategory = () => {
     // }
 
     console.log(selectedVegImages);
-    if ((reserId == 1) && (selectedVegImages && selectedVegImages.length <= 0)) {
-      Swal.fire({ icon: 'warning', title: 'Kindly Provide the Veg menu image.', position: 'center', timer: '3000', });
-      return;
-    }
+    // if ((reserId == 1) && (selectedVegImages && selectedVegImages.length <= 0)) {
+    //   Swal.fire({ icon: 'warning', title: 'Kindly Provide the Veg menu image.', position: 'center', timer: '3000', });
+    //   return;
+    // }
 
-    if ((reserId == 1) && (selectedNonVegImages && selectedNonVegImages.length <= 0)) {
-      Swal.fire({ icon: 'warning', title: 'Kindly Provide the Non Veg menu image.', position: 'center', timer: '3000', });
-      return;
-    }
+    // if ((reserId == 1) && (selectedNonVegImages && selectedNonVegImages.length <= 0)) {
+    //   Swal.fire({ icon: 'warning', title: 'Kindly Provide the Non Veg menu image.', position: 'center', timer: '3000', });
+    //   return;
+    // }
 
-    if ((reserId == 1) && (vegmenus[0] == "")) {
-      Swal.fire({ icon: 'warning', title: 'Kindly provide One veg menu', position: 'center', timer: '3000', });
-      return;
-    }
+    // if ((reserId == 1) && (vegmenus[0] == "")) {
+    //   Swal.fire({ icon: 'warning', title: 'Kindly provide One veg menu', position: 'center', timer: '3000', });
+    //   return;
+    // }
 
-    if ((reserId == 1) && (nonvegmenus[0] == "")) {
-      Swal.fire({ icon: 'warning', title: 'Kindly provide One non-veg menu', position: 'center', timer: '3000', });
-      return;
-    }
+    // if ((reserId == 1) && (nonvegmenus[0] == "")) {
+    //   Swal.fire({ icon: 'warning', title: 'Kindly provide One non-veg menu', position: 'center', timer: '3000', });
+    //   return;
+    // }
 
     await stateBulkUpdate();
     await AfterSubmit();

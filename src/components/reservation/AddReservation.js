@@ -25,6 +25,10 @@ const AddReservation = () => {
 
   const [status, setStatus] = useState('Active');
 
+  const [resCode, setResCode] = useState("CL");
+  const [resCodes, setResCodes] = useState(['CL', 'BP', 'TB']);
+
+
   const [modalImage, setModalImage] = useState(false);
   const [modalImages, setModalImages] = useState(false);
 
@@ -66,16 +70,17 @@ const AddReservation = () => {
           setSelectedImages(result.extra_img);
           setVideo(result.reser_video);
           setStatus(result.status);
+          setResCode(result.reser_code);
           setID(id);
         } else {
           setID('');
-          Swal.fire({icon: 'Success',title: 'No Record Found',position: 'center'});
+          Swal.fire({ icon: 'Success', title: 'No Record Found', position: 'center' });
           navigate('/ListReservation');
         }
       })
       .catch((error) => {
         setID('');
-        Swal.fire({icon: 'Error',title: 'Error in Fetching',position: 'center'});
+        Swal.fire({ icon: 'Error', title: 'Error in Fetching', position: 'center' });
         navigate('/ListReservation');
       });
   }, [id]);
@@ -178,6 +183,7 @@ const AddReservation = () => {
 
     const formData = new FormData();
     formData.append('reser_title', Title);
+    formData.append('reser_code', resCode);
     formData.append('reser_main_title', MainTitle);
     formData.append('description', Description);
     formData.append('reser_img', Image);
@@ -225,15 +231,15 @@ const AddReservation = () => {
       .then(function (res) {
         console.log(res.data);
         if (res?.data?.Response?.Success == '1') {
-          Swal.fire({icon: 'success',title: res.data.Response.message,position: 'center',timer: 3000,});
+          Swal.fire({ icon: 'success', title: res.data.Response.message, position: 'center', timer: 3000, });
           navigate('/ListReservation');
         } else {
-          Swal.fire({icon: 'error',title: res.data.Response.message,position: 'center',timer: 3000,});
+          Swal.fire({ icon: 'error', title: res.data.Response.message, position: 'center', timer: 3000, });
         }
       })
       .catch((error) => {
         console.error('fetching error:', error);
-        Swal.fire({icon: 'error',title: "Something Went Wrong",position: 'center',timer: 3000,});
+        Swal.fire({ icon: 'error', title: "Something Went Wrong", position: 'center', timer: 3000, });
       });
   };
 
@@ -292,6 +298,24 @@ const AddReservation = () => {
           <div className="col-lg-4">
             <Card style={{ width: '90%', paddingLeft: '2%', paddingRight: '2%', marginLeft: 'auto', marginRight: 'auto', boxShadow: '0px 0px 10px rgba(255, 215, 0, 0.5)', border: 'solid 1px #ffc107', paddingTop: '3vh', paddingBottom: '3vh', marginTop: '5vh' }}>
               <CardContent className="mx-3">
+
+                <FormControl fullWidth variant="outlined">
+                  <InputLabel>Reservation Code</InputLabel>
+                  <Select className="bg-light"
+                    value={resCode}
+                    required
+                    onChange={(event) => setResCode(event.target.value)}
+                    label="Reservation Code"
+                  >
+                    {resCodes?.map((item, index) => (
+                      <MenuItem key={index} value={item}>
+                        {item}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+
+
                 <FormControl fullWidth>
                   <TextField
                     InputLabelProps={{ shrink: true }}
@@ -314,6 +338,11 @@ const AddReservation = () => {
                     onChange={(e) => setTitle(e.target.value)}
                   />
                 </FormControl>
+
+
+
+
+
                 <FormControl fullWidth>
                   <TextareaAutosize
                     minRows={3}
@@ -426,7 +455,7 @@ const AddReservation = () => {
                   }
                 </FormControl>
 
-                <FormControl fullWidth variant="outlined" style={{marginTop:"20px"}}>
+                <FormControl fullWidth variant="outlined" style={{ marginTop: "20px" }}>
                   <InputLabel>Status</InputLabel>
                   <Select className="bg-light"
                     value={status}
