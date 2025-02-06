@@ -50,6 +50,8 @@ import AddCategory from "./components/reservation/AddCategory";
 import ListSubCategory from "./components/reservation/ListSubCategory";
 import AddSubCategory from "./components/reservation/AddSubCategory";
 import ListBooked from "./components/booking/ListBooked";
+import ListCustomer from "./components/customer/ListCustomer";
+import AddCustomer from "./components/customer/AddCustomer";
 
 
 
@@ -201,6 +203,39 @@ const Main = () => {
             element={
               isAuthenticated() ? (
                 [<Navbar />, <Sidebar />, <ListBooked />]
+              ) : (
+                <Login />
+              )
+            }
+          />
+
+          <Route
+            path="/ListCustomer"
+            element={
+              isAuthenticated() ? (
+                [<Navbar />, <Sidebar />, <ListCustomer />]
+              ) : (
+                <Login />
+              )
+            }
+          />
+
+          <Route
+            path="/AddCustomer"
+            element={
+              isAuthenticated() ? (
+                [<Navbar />, <Sidebar />, <AddCustomer />]
+              ) : (
+                <Login />
+              )
+            }
+          />
+
+          <Route
+            path="/UpdateCustomer/:id"
+            element={
+              isAuthenticated() ? (
+                [<Navbar />, <Sidebar />, <AddCustomer />]
               ) : (
                 <Login />
               )

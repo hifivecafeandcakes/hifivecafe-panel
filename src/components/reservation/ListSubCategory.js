@@ -175,6 +175,8 @@ const ListSubCategory = () => {
   }
 
   const categoryListSelect = (res_id) => {
+    if (res_id == "") { res_id = 0 }
+
     axios
       .get(`${process.env.REACT_APP_API_URL}/admin/category/select/${res_id}`)
       .then(function (res) {

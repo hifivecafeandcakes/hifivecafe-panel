@@ -24,6 +24,9 @@ export const loginUser = async (email, password, login, ipAddress) => {
     if (response.data.Response.success == '1') {
       const token = response.data.Response.result[0].token;
       const name = response.data.Response.result[0].name;
+      let admin_id = response.data.Response.result[0].admin_id;
+      localStorage.setItem('admin_id', admin_id);
+      console.log(admin_id);
       login(token)
       return { success: true, name };
     } else {

@@ -30,7 +30,7 @@ export default function Login() {
 
   // const login_mail = (Id, IP_Address, Panel_name) => {
   //   axios.post(`${process.env.REACT_APP_API_URL}/mail/panel_login_sentmail`, { Id, ipAddress, Panel_name })
-    
+
   //     .then((res) => {
   //       console.log(res);
   //     })
@@ -63,11 +63,11 @@ export default function Login() {
         });
         return;
       }
-      
+
       const success = await loginUser(email, password, login, ipAddress);
       console.log("success", success);
 
-      if (success.success) { 
+      if (success.success) {
         // login_mail(email, ipAddress, panelname)
         Swal.fire({
           icon: 'success',
@@ -75,7 +75,9 @@ export default function Login() {
           position: 'center',
         });
         const prevLocation = localStorage.getItem('prevLocSubAdmin');
-        navigate(prevLocation || '/Dashboard');        
+
+        
+        navigate(prevLocation || '/Dashboard');
       } else {
         Swal.fire({
           icon: 'error',
@@ -108,9 +110,9 @@ export default function Login() {
 
   return (
     <>
-      <div 
-      // style={{ backgroundImage: `url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-71041.jpg?t=st=1702028243~exp=1702028843~hmac=503a5d16096980a9bfc6141f383e8b34369ba0f167a044cc9924c5805cf4bae6")`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', minHeight: '100vh' }}
-      
+      <div
+        // style={{ backgroundImage: `url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-71041.jpg?t=st=1702028243~exp=1702028843~hmac=503a5d16096980a9bfc6141f383e8b34369ba0f167a044cc9924c5805cf4bae6")`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', minHeight: '100vh' }}
+
         style={{
           background: `url(${wallpaper})`,
           backgroundSize: 'cover',
@@ -120,8 +122,8 @@ export default function Login() {
           minHeight: '100vh'
         }}
       >
-        
-        <div className="login-box" style={{marginLeft:'auto', marginRight:'auto', paddingTop:'20vh', paddingBottom:'auto', width:'45vh'}}>
+
+        <div className="login-box" style={{ marginLeft: 'auto', marginRight: 'auto', paddingTop: '20vh', paddingBottom: 'auto', width: '45vh' }}>
           <div className="login-logo">
             <style>{zoomKeyframes}</style>
             {/* <img
@@ -134,24 +136,24 @@ export default function Login() {
             /> */}
           </div>
 
-          <div className="card" 
+          <div className="card"
             style={{
               border: 'dotted 2px rgba(252,183,19,255)',
-              borderRadius:'1.5vh',
+              borderRadius: '1.5vh',
               padding: '1.5vh',
               boxShadow: '0 0 10px #fcb713',
-              marginTop:'3vh', 
-              marginLeft:'1vh',
-              marginRight:'1vh'
+              marginTop: '3vh',
+              marginLeft: '1vh',
+              marginRight: '1vh'
             }}
           >
             <div className="card-body login-card-body">
-              <h3 className="login-box-msg" style={{ fontFamily:'Black Ops One', fontWeight:'500', marginTop:'-0.5vh', marginBottom:'-0.5vh', marginLeft:'-3vh', whiteSpace:'nowrap'}}>ADMIN PANEL</h3>
+              <h3 className="login-box-msg" style={{ fontFamily: 'Black Ops One', fontWeight: '500', marginTop: '-0.5vh', marginBottom: '-0.5vh', marginLeft: '-3vh', whiteSpace: 'nowrap' }}>ADMIN PANEL</h3>
 
               <form onSubmit={handleSubmit}>
-                <div style={{display:'flex'}}>
+                <div style={{ display: 'flex' }}>
                   <input
-                    style={{ height: '7vh', marginRight:"-6vh" }}
+                    style={{ height: '7vh', marginRight: "-6vh" }}
                     type="text"
                     name="email"
                     id="email"
@@ -159,17 +161,17 @@ export default function Login() {
                     placeholder="Employee Id"
                   />
                   <div className="input-group-append">
-                      <Lottie style={{ width: '5vh' }}
-                        animationData={IdLottie}
-                        loop={true}
-                        autoplay={true}
-                      />                    
-                      {/* <span className="fas fa-envelope" />  */}
-                    </div> 
+                    <Lottie style={{ width: '5vh' }}
+                      animationData={IdLottie}
+                      loop={true}
+                      autoplay={true}
+                    />
+                    {/* <span className="fas fa-envelope" />  */}
+                  </div>
                 </div>
-                <div className="my-4" style={{display:'flex'}}>
+                <div className="my-4" style={{ display: 'flex' }}>
                   <input
-                    style={{ height: '7vh' ,marginRight: "-6vh" }}
+                    style={{ height: '7vh', marginRight: "-6vh" }}
                     type="password"
                     name="password"
                     id="password"
@@ -177,14 +179,14 @@ export default function Login() {
                     placeholder="Password"
                   />
                   <div className="input-group-append">
-                      <Lottie style={{ width: '5vh' }}
-                        animationData={PasswordLottie}
-                        loop={true}
-                        autoplay={true}
-                      />
-                      {/* <span className="fas fa-lock" /> */}
-                    </div>
+                    <Lottie style={{ width: '5vh' }}
+                      animationData={PasswordLottie}
+                      loop={true}
+                      autoplay={true}
+                    />
+                    {/* <span className="fas fa-lock" /> */}
                   </div>
+                </div>
                 <div className="row">
                   <div className="col-4"></div>
 

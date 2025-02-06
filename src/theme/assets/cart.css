@@ -1,18 +1,21 @@
-.cart-div{
- background-color: black !important;
+.cart-div {
+    background-color: black !important;
+    /* height: 100vh; */
 }
 
-.card-body{
+.card-body {
     padding: 30px;
 }
 
 .cart-title {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
 }
 
 .cart-head {
     margin-bottom: 50px;
+    margin-top: 30px;
     /* margin-left: 75px;
     margin-right: 75px; */
 }
@@ -23,15 +26,15 @@
     color: orange;
 }
 
-.orangered{
+.orangered {
     color: orangered
 }
 
-.greenyellow{
+.greenyellow {
     color: greenyellow
 }
 
-.brown{
+.brown {
     color: brown
 }
 
@@ -49,56 +52,195 @@
     color: grey;
 }
 
-.sub-cat-part{
+.sub-cat-part {
     display: flex;
     flex-direction: column;
-    color:orange;
+    color: orange;
     margin-top: 10px;
     font-size: 16px;
 }
 
-.text-cente{
+.text-cente {
     text-align: center;
 }
 
 .sub-img {
-    width:140px;
-    height:160px;
+    width: 140px;
+    height: 160px;
     border-radius: 10%;
     border: 1px solid orange;
 }
 
-.orange{
+.orange {
     color: orange;
 }
 
-.green, .success{
+.green,
+.success {
     color: green;
 }
 
-.red, .error{
+.red,
+.error {
     color: red;
 }
 
-.white
-{
+.white {
     color: #fff;
 }
 
-.grey{
-    color: goldenrod;
-}
-
-.fs-14{
+.fs-14 {
     font-size: 14px;
 }
-.fs-12{
+
+.fs-12 {
     font-size: 12px;
 }
-.fs-10{
+
+.fs-10 {
     font-size: 10px;
 }
 
-.fs-18{
+.fs-18 {
     font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+
+.w-30 {
+    width: 30%;
+}
+
+/* tabs */
+.tab-app {
+    width: 100%;
+    position: relative;
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid white;
+    padding: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+
+.overlay {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: white;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 50%;
+    border: 2px solid orange;
+    background: orange;
+}
+
+.booking_id {
+    width: auto;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    font-weight: bolder;
+    border-radius: 25px;
+}
+
+.buttioning {
+    width: auto;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    font-weight: bolder;
+    border-radius: 25px;
+}
+
+
+.cart-div .MuiInputLabel-formControl {
+    /* padding-top: 10px !important; */
+    color: white !important;
+    font-size: 10px;
+}
+
+.cart-div .MuiInputBase-formControl {
+    border: 1px solid white !important;
+    background-color: black !important;
+    border-radius: 25px;
+    width: 100%;
+    padding: 0px;
+    font-size: 10px;
+    line-height: 0.5em !important;
+}
+
+.cart-div .MuiInputBase-input {
+    color: white !important;
+}
+
+
+.events-div {
+    border: 1px solid white !important;
+    border-radius: 25px;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 0px;
 }

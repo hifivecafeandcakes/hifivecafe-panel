@@ -260,6 +260,36 @@ export default function Sidebar() {
                 </ul>
               </li>
 
+
+              <li
+                className={`nav-item ${reportsOpen2 ? "menu-open" : "menu-close"
+                  }`}
+              >
+                <a className="nav-link sidebar-head" onClick={toggleReports2}>
+                  <i className="nav-icon fas fa-user" />
+                  <p className="treeview-fontsize1">
+                    Customers
+                    <i className="fas fa-angle-left right" />
+                  </p>
+                </a>
+                <ul
+                  className={`nav nav-treeview ${reportsOpen2 ? "d-block" : "d-none"
+                    }`}
+                >
+                  <li className="nav-item">
+                    <Link
+                      to="/ListCustomer"
+                      className="nav-link ml-4 sidebar-content"
+                    >
+                      <i className="far fa-circle nav-icon" />
+                      <p className="treeview-fontsize1">Customer</p>
+                    </Link>
+                  </li>
+
+                  
+                </ul>
+              </li>
+
             </ul>
           </nav>
         </div>
