@@ -14,6 +14,7 @@ export default function Navbar() {
   const [submenuVisible1, setSubmenuVisible1] = useState(false);
   const [submenuVisible2, setSubmenuVisible2] = useState(false);
   const [submenuVisible3, setSubmenuVisible3] = useState(false);
+  const [submenuVisible4, setSubmenuVisible4] = useState(false);
 
   // Function to toggle dropdown menu visibility
   const toggleDropdown = () => {
@@ -26,6 +27,9 @@ export default function Navbar() {
     }
     if (submenuVisible3) {
       toggleSubmenu3();
+    }
+    if (submenuVisible4) {
+      toggleSubmenu4();
     }
   };
 
@@ -40,6 +44,10 @@ export default function Navbar() {
     if (submenuVisible3) {
       toggleSubmenu3();
     }
+
+    if (submenuVisible4) {
+      toggleSubmenu4();
+    }
   };
 
   const toggleSubmenu2 = (e) => {
@@ -52,6 +60,9 @@ export default function Navbar() {
     if (submenuVisible3) {
       toggleSubmenu3();
     }
+    if (submenuVisible4) {
+      toggleSubmenu4();
+    }
   };
 
 
@@ -63,6 +74,23 @@ export default function Navbar() {
     }
     if (submenuVisible2) {
       toggleSubmenu2();
+    }
+    if (submenuVisible4) {
+      toggleSubmenu4();
+    }
+  };
+
+  const toggleSubmenu4 = (e) => {
+    // e.preventDefault(); // Prevent navigating to "/dashboard"
+    setSubmenuVisible4(!submenuVisible4);
+    if (submenuVisible1) {
+      toggleSubmenu1();
+    }
+    if (submenuVisible2) {
+      toggleSubmenu2();
+    }
+    if (submenuVisible3) {
+      toggleSubmenu3();
     }
   };
 
@@ -190,6 +218,22 @@ export default function Navbar() {
                     <ul className="dropdown-menu show" style={{ position: "absolute", left: "100%", top: "0" }}>
                       <Link to="/ListCustomer" className="dropdown-item" onClick={() => { toggleSubmenu3(false); toggleDropdown(false); }}>
                         Customers
+                      </Link>
+                    </ul>
+                  )}
+                </li>
+
+                <li className="dropdown-submenu">
+                  <a className="dropdown-item" href="#" onClick={toggleSubmenu4}>
+                    Visitors
+                    <i className="fas fa-chevron-right" style={{ float: "right" }}></i>
+                  </a>
+
+                  {/* Submenu Items */}
+                  {submenuVisible4 && (
+                    <ul className="dropdown-menu show" style={{ position: "absolute", left: "100%", top: "0" }}>
+                      <Link to="/ListVisitor" className="dropdown-item" onClick={() => { toggleSubmenu4(false); toggleDropdown(false); }}>
+                        Visitors
                       </Link>
                     </ul>
                   )}

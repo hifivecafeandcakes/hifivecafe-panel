@@ -13,6 +13,7 @@ export default function Sidebar() {
   const [reportsOpen3, setReportsOpen3] = useState(false);
   const [reportsOpen4, setReportsOpen4] = useState(false);
   const [reportsOpen5, setReportsOpen5] = useState(false);
+  const [reportsOpen6, setReportsOpen6] = useState(false);
   const [registrationOpen, setRegistrationOpen] = useState(false);
 
   const [DailyActivityOpen, setdailyactivity] = useState(false);
@@ -43,6 +44,10 @@ export default function Sidebar() {
 
   const toggleReports5 = () => {
     setReportsOpen5(!reportsOpen5);
+  };
+
+  const toggleReports6 = () => {
+    setReportsOpen6(!reportsOpen6);
   };
 
 
@@ -256,7 +261,7 @@ export default function Sidebar() {
                     </Link>
                   </li>
 
-                  
+
                 </ul>
               </li>
 
@@ -286,7 +291,36 @@ export default function Sidebar() {
                     </Link>
                   </li>
 
-                  
+
+                </ul>
+              </li>
+
+              <li
+                className={`nav-item ${reportsOpen4 ? "menu-open" : "menu-close"
+                  }`}
+              >
+                <a className="nav-link sidebar-head" onClick={toggleReports4}>
+                  <i className="nav-icon fas fa-user" />
+                  <p className="treeview-fontsize1">
+                    Visitors
+                    <i className="fas fa-angle-left right" />
+                  </p>
+                </a>
+                <ul
+                  className={`nav nav-treeview ${reportsOpen4 ? "d-block" : "d-none"
+                    }`}
+                >
+                  <li className="nav-item">
+                    <Link
+                      to="/ListVisitor"
+                      className="nav-link ml-4 sidebar-content"
+                    >
+                      <i className="far fa-circle nav-icon" />
+                      <p className="treeview-fontsize1">Visitor</p>
+                    </Link>
+                  </li>
+
+
                 </ul>
               </li>
 

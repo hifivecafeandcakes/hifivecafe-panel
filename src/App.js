@@ -52,6 +52,7 @@ import AddSubCategory from "./components/reservation/AddSubCategory";
 import ListBooked from "./components/booking/ListBooked";
 import ListCustomer from "./components/customer/ListCustomer";
 import AddCustomer from "./components/customer/AddCustomer";
+import ListVisitor from "./components/visitor/ListVisitor";
 
 
 
@@ -241,6 +242,19 @@ const Main = () => {
               )
             }
           />
+
+          <Route
+            path="/ListVisitor"
+            element={
+              isAuthenticated() ? (
+                [<Navbar />, <Sidebar />, <ListVisitor />]
+              ) : (
+                <Login />
+              )
+            }
+          />
+
+
 
 
 

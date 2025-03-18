@@ -103,12 +103,12 @@ const Order = () => {
                 if (data?.Response.Success === '1') { setReservationList(data?.Response.result); }
                 else {
                     setReserId('');
-                    Swal.fire({ icon: 'Success', title: 'Reservation Type Record Found', position: 'center' });
+                    // Swal.fire({ icon: 'Success', title: 'Reservation Type Record Found', position: 'center' });
                 }
             })
             .catch((error) => {
                 setReserId('');
-                Swal.fire({ icon: 'Error', title: 'Error in Fetching', position: 'center' });
+                // Swal.fire({ icon: 'Error', title: 'Error in Fetching', position: 'center' });
             });
     }
 
@@ -123,13 +123,13 @@ const Order = () => {
                 else {
                     setCatID('');
                     setCategoryList([]);
-                    Swal.fire({ icon: 'Success', title: 'Category Record Found', position: 'center' });
+                    // Swal.fire({ icon: 'Success', title: 'Category Record Found', position: 'center' });
                 }
             })
             .catch((error) => {
                 setCatID('');
                 setCategoryList([]);
-                Swal.fire({ icon: 'Error', title: 'Error in Fetching', position: 'center' });
+                // Swal.fire({ icon: 'Error', title: 'Error in Fetching', position: 'center' });
             });
     }
 
@@ -142,12 +142,12 @@ const Order = () => {
                 if (data?.Response.Success === '1') { setCustomerList(data?.Response.result); }
                 else {
                     setCustomerID('');
-                    Swal.fire({ icon: 'Success', title: 'Customer Record Found', position: 'center' });
+                    // Swal.fire({ icon: 'Success', title: 'Customer Record Found', position: 'center' });
                 }
             })
             .catch((error) => {
                 setCustomerID('');
-                Swal.fire({ icon: 'Error', title: 'Error in Fetching', position: 'center' });
+                // Swal.fire({ icon: 'Error', title: 'Error in Fetching', position: 'center' });
             });
     }
 
