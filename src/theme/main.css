@@ -569,6 +569,10 @@ Rest of your existing styles .vendors-btn {
         width: 80% !important;
 }
 
+.w-100 {
+        width: 100px !important;
+}
+
 .blue {
         color: blue;
 }
@@ -581,6 +585,13 @@ Rest of your existing styles .vendors-btn {
         color: yellow;
 }
 
-.dropdown-item{
+.dropdown-item {
         margin-top: 15px;
+}
+
+.td-row-des {
+        max-width: 100px;
+        word-wrap: break-word;
+        overflow: auto;
+
 }

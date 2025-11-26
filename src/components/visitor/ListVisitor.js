@@ -93,6 +93,7 @@ const ListVisitor = () => {
 
 
   const changePastTab = (tabName) => {
+    setResult([]);
     setPastTab(tabName); // Set the active tab when a tab is clicked
   };
 

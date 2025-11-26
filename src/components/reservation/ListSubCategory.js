@@ -304,6 +304,7 @@ const ListSubCategory = () => {
                               <TableCell className='text-center'>Action</TableCell>
                               <TableCell className='text-center'>S.NO</TableCell>
                               <TableCell className='text-center'>Sub-Category Title</TableCell>
+                              <TableCell className='text-center'>Sub-Category Description</TableCell>
 
                               <TableCell className='text-center'>Reservation Type</TableCell>
 
@@ -334,6 +335,7 @@ const ListSubCategory = () => {
                                 </TableCell>
                                 <TableCell className='text-center'>{index + 1}</TableCell>
                                 <TableCell className='text-center'>{item.sub_tilte}</TableCell>
+                                <TableCell className='text-center td-row-des'>{item.sub_cat_des}</TableCell>
                                 <TableCell className='text-center'>{item.reser_title}</TableCell>
                                 <TableCell className='text-center'>{item.reser_cat_title}</TableCell>
                                 <TableCell className='text-center'>{item.sub_cat_price_range}</TableCell>

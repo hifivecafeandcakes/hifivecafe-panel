@@ -12,6 +12,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 const AddSubCategory = () => {
 
   const [Title, setTitle] = useState('');
+  const [Description, setDescription] = useState('');
   const [range, setRange] = useState('');
   const [Image, setImage] = useState(null);
   const [deleteImg, setDeleteImg] = useState('');
@@ -79,6 +80,7 @@ const AddSubCategory = () => {
           categoryListSelect(result.reser_id);
           setCatID(result.reser_cat_id);
           setRange(result.sub_cat_price_range);
+          setDescription(result.sub_cat_des);
 
           setSelectedVegImages(result.veg_images);
           setSelectedNonVegImages(result.nonveg_images);
@@ -498,6 +500,7 @@ const AddSubCategory = () => {
       formData.append('reser_id', reserId);
       formData.append('reser_cat_id', CatID);
       formData.append('sub_tilte', Title);
+      formData.append('sub_cat_des', Description);
       formData.append('sub_cat_price_range', range);
 
       if (Image) { formData.append('sub_img', Image); }
@@ -695,6 +698,24 @@ const AddSubCategory = () => {
                     onChange={(e) => setTitle(e.target.value)}
                   />
                 </FormControl>
+
+
+                <FormControl fullWidth>
+                  <TextField
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    label="Description"
+                    fullWidth
+                    margin="normal"
+                    value={Description}
+                    onChange={(e) => setDescription(e.target.value)}
+                    multiline
+                    rows={4}
+                    inputProps={{ maxLength: 150 }}   
+                  />
+                </FormControl>
+
 
                 <FormControl fullWidth>
                   <TextField

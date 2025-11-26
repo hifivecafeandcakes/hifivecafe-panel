@@ -60,6 +60,45 @@ export default function Dashboard() {
               <section className="content">
                 <div className="container-fluid">
                   <div className="row">
+
+                    <div className="col-lg-3 col-6">
+                      <div className="small-box bg-warning">
+                        <div className="inner">
+                          <h4>{result.todayVisitorCount}</h4>
+                          <p className="Dashboard1-content">Today Visitors</p>
+                        </div>
+                        <div className="icon">
+                          <i className="ion ion-person-add" />
+                        </div>
+                        <div className="inner">
+                          <h4>{result.yesterdayVisitorCount}</h4>
+                          <p className="Dashboard1-content">Yesterday Visitors</p>
+                        </div>
+
+                        <div className="inner">
+                          <h4>{result.oneweekVisitorCount}</h4>
+                          <p className="Dashboard1-content">One Week Visitors</p>
+                        </div>
+
+                        <div className="inner">
+                          <h4>{result.twoweekVisitorCount}</h4>
+                          <p className="Dashboard1-content">Two Week Visitors</p>
+                        </div>
+
+                        <div className="inner">
+                          <h4>{result.onemonthVisitorCount}</h4>
+                          <p className="Dashboard1-content">One Month Visitors</p>
+                        </div>
+
+                        <Link to="/ListVisitor"
+                          className="small-box-footer Dashboard1-content"
+                        >
+                          More info <i className="fas fa-arrow-circle-right" />
+                        </Link>
+                      </div>
+                    </div>
+
+
                     <div className="col-lg-3 col-6 ">
                       <div className="small-box bg-info">
                         <div className="inner">
@@ -81,6 +120,25 @@ export default function Dashboard() {
                         >
                           More info
                           <i className="fas fa-arrow-circle-right" />
+                        </Link>
+                      </div>
+
+                      <div className="small-box bg-warning">
+                        <div className="inner">
+                          <h4>{result.customerActiveCount}</h4>
+                          <p className="Dashboard1-content">Active Customers</p>
+                        </div>
+                        <div className="icon">
+                          <i className="ion ion-person-add" />
+                        </div>
+                        <div className="inner">
+                          <h4>{result.customerInactiveCount}</h4>
+                          <p className="Dashboard1-content">Inactive Customers</p>
+                        </div>
+                        <Link to="/ListCustomer"
+                          className="small-box-footer Dashboard1-content"
+                        >
+                          More info <i className="fas fa-arrow-circle-right" />
                         </Link>
                       </div>
                     </div>
@@ -141,24 +199,7 @@ export default function Dashboard() {
                     </div>
 
                     <div className="col-lg-3 col-6">
-                      <div className="small-box bg-warning">
-                        <div className="inner">
-                          <h4>{result.customerActiveCount}</h4>
-                          <p className="Dashboard1-content">Active Customers</p>
-                        </div>
-                        <div className="icon">
-                          <i className="ion ion-person-add" />
-                        </div>
-                        <div className="inner">
-                          <h4>{result.customerInactiveCount}</h4>
-                          <p className="Dashboard1-content">Inactive Customers</p>
-                        </div>
-                        <Link to="/ListCustomer"
-                          className="small-box-footer Dashboard1-content"
-                        >
-                          More info <i className="fas fa-arrow-circle-right" />
-                        </Link>
-                      </div>
+
                     </div>
 
 
